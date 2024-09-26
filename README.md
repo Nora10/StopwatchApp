@@ -1,6 +1,9 @@
 # StopwatchApp
 A demo React stopwatch app that accounts for laps and time tracking.
 
+![lap reset](https://github.com/user-attachments/assets/a5f2158a-e772-4771-8cd6-53fe32735899)
+
+
 A bare bones stopwatch application built with React, allowing users to start, stop, reset, and record lap times. It uses modern React features like hooks (useState - to track state, useEffect - for managing side effects, useCallback- to memoize and reduce re-renders) for more reliable state management and rendering. 
 
 **NOTE**: This demo is built with the assumption that it would be used as part of a larger system. If it is to be used on a smaller application, then the use of useCallback hook should be limited, as it is a costly calculation. 
@@ -17,15 +20,21 @@ A bare bones stopwatch application built with React, allowing users to start, st
 2. Could be used like a pomodoro app for productivity improvement
 
 **Other things to note**:
-There would be comments in the code to show best practices. 
+There would be comments in the code to show best practices.
+
+ ![lap running](https://github.com/user-attachments/assets/fa69e6c3-b1ee-4dc5-b4fd-6633a1299906)
 
 
 
+# To RUN
 
+Clone the project.
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. The file **docs.md** - Shows a list of things that have been improved and things to improve on in the future. 
+2. The **Prevstopwatch.tsx** - Contains all comments on the previous code. No changes were made to the code itself. There are keys included [ **NOTE: I is for issue, W is for why, and Todo is what to do differently**]
+3. The **Stopwatch.tsx** - file contains the reworked code.
+4. The **App.css** - contains the styling
+5. The **Lap.tsx** - contains the lap details.
 
 ## Available Scripts
 
@@ -38,34 +47,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
