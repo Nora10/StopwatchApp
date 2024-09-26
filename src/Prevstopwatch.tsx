@@ -9,7 +9,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Component, ClassAttributes } from "react";
-// I: line 7 and line 9 should be merged for imports. ClassAttributes is not needed in modern react, the focus is now on functional component with hooks.
+// I: line 9 and line 11 should be merged for imports. ClassAttributes is not needed in modern react, the focus is now on functional component with hooks.
 // W: Both imports are from 'react', and class component usage in react is outdated.
 // Todo: Remove the react imports.
 
