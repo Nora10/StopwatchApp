@@ -2,37 +2,191 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Stopwatch Container */
+.stopwatch-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  text-align: center;
+  color: #fff;
+  max-width: 400px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+  min-height: 350px;
+  transition: min-height 0.4s ease-in-out, padding 0.4s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Timer Styling */
+.stopwatch-timer {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  animation: pulse 1.5s infinite;
+}
+
+/* Animation for Timer */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Button Container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; 
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  transition: all 0.3s ease-in-out ;
+}
+
+/* General Button Styling */
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.3s, opacity 0.3s ease;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+/* Start/Stop Button */
+.start-stop {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.start-stop:hover {
+  background-color: #16a085;
+}
+
+/* Reset Button */
+.reset {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.reset:hover {
+  background-color: #c0392b;
+}
+
+/* Lap Button */
+.lap {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.lap:hover {
+  background-color: #e67e22;
+}
+
+/* Stopwatch Laps */
+.stopwatch-laps {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Individual Lap Styling */
+.stopwatch-lap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.stopwatch-lap:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Delete Lap Button */
+.delete-lap {
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-lap:hover {
+  background-color: #c0392b;
+}
+
+/* Add React Logo at the Bottom of the Container */
+.stopwatch-container::after {
+  content: "";
+  background-image: url('/public/logo192.png'); 
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.stopwatch-container::after:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .stopwatch-container {
+    padding: 2rem;
+    min-height: 300px;
+  }
+
+  .stopwatch-timer {
+    font-size: 3rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .stopwatch-laps {
+    max-height: 150px;
   }
 }
