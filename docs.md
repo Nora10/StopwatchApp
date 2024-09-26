@@ -1,4 +1,4 @@
-## 50 Things to Improve:
+## Things that have been worked on and Things to Improve:
 
 The code works but is outdated and inefficient in several areas. Moving to modern React with hooks, ensuring proper state management, and avoiding forced updates or state mutation will make it more robust.
 
