@@ -48,7 +48,7 @@ export const Stopwatch: React.FC<StopwatchProps> = ({ initialSeconds }) => {
                 <span aria-live="polite">{formatTime(secondsElapsed)}s</span>
             </h1>
             <div className="buttons">
-                <button tabIndex={0} aria-label={isTimerRunning ? "Stop the stopwatch" : "Start the stopwatch"} className="button start-stop" onClick={handleStartStop} aria-pressed={isTimerRunning}>
+                <button aria-label={isTimerRunning ? "Stop the stopwatch" : "Start the stopwatch"} className="button start-stop" onClick={handleStartStop} aria-pressed={isTimerRunning}>
                     {isTimerRunning ? "Stop" : "Start"}
                 </button>
                 {secondsElapsed > 0 && !isTimerRunning && (
